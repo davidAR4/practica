@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/productos/guardar}" th:object="${crear}" method="post">
+            <label>nombre</label>
+            <input type="text" th:field="*{nombreProducto}">
+
+        <label>categoria</label>
+        <input type="text" th:field="*{categoria}">
+
+        <label>precio</label>
+        <input type="text" th:field="*{precio}">
+
+        <label>stock</label>
+        <input type="text" th:field="*{stock}">
+
+        <input type="submit" value="registrar">
+    </form>
+</body>
+</html>
