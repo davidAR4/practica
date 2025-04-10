@@ -11,19 +11,20 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Entity
-public class Producto {
+public class Alumno {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idProducto;
+    private int idAlumno;
 
-    private String nombreProducto;
+    private String nombre;
 
-    private String categoria;
+    private String apellido;
 
-    private double precio;
 
-    private int stock;
+    private String edad;
 
-    @OneToOne(mappedBy = "producto")
-    private DetalleProducto detalleProducto;
+    @OneToMany(mappedBy = "alumno")
+    private List<Profesor> profesor;
 }
+
