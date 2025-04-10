@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+            </tr>
+
+            <tr th:each ="e : ${trabajador}">
+                <td th:text="${e.id}"></td>
+                <td th:text ="${e.nombre}"></td>
+                <td th:text = "${e.apellido}"></td>
+                <td th:text="${e.correo}"></td>
+            </tr>
+        </table>
+</body>
+</html>
